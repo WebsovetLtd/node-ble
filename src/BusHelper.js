@@ -28,6 +28,10 @@ class BusHelper extends EventEmitter {
 
   async _prepare () {
     if (this._ready) return
+
+    if (this._propsProxy)
+      this._propsProxy.removeAllListeners('PropertiesChanged');
+
     const objectProxy = this._objectProxy = await this.dbus.getProxyObject(this.service, this.object)
     this._ifaceProxy = await objectProxy.getInterface(this.iface)
 
