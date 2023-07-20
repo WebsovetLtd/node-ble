@@ -15,6 +15,7 @@ class Device extends EventEmitter {
     this.adapter = adapter
     this.device = device
     this.helper = new BusHelper(dbus, 'org.bluez', `/org/bluez/${adapter}/${device}`, 'org.bluez.Device1', { usePropsEvents: true })
+    this.battery_helper = new BusHelper(dbus, 'org.bluez', `/org/bluez/${adapter}/${device}`, 'org.bluez.Battery1', { usePropsEvents: false });
   }
 
   /**
@@ -79,6 +80,14 @@ class Device extends EventEmitter {
    */
   async isConnected () {
     return this.helper.prop('Connected')
+  }
+
+  /**
+   * The percentage of battery left
+   * @returns {number}
+   */
+  async getBattery() {
+    return this.battery_helper.prop('Percentage');
   }
 
   /**
