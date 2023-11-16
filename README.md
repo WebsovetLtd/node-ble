@@ -1,5 +1,7 @@
 # node-ble
 
+## forked from [chrvadala/node-ble](https://github.com/chrvadala/node-ble)
+
 Bluetooth Low Energy (BLE) library written with pure Node.js (no bindings) - baked by Bluez via DBus
 
 [![chrvadala](https://img.shields.io/badge/website-chrvadala-orange.svg)](https://chrvadala.github.io)
@@ -117,8 +119,8 @@ It leverages on Bluez driver, a component supported by the following platforms a
 - **1.5** - Adds write options configuration  `async writeValue (value, optionsOrOffset = {})` [#20](https://github.com/chrvadala/node-ble/pull/20); Upgrades deps
 - **1.6** - Upgrades deps and removes some dependencies; migrates to npm; improves gh-actions
 - **1.7** - Fixes compatibility issue [#30](https://github.com/chrvadala/node-ble/issues/30); Adds JSdoc; Deprecates NodeJS 10 and 12; Upgrades deps;
-- **1.8** - Upgrades deps and gh-actions os; Adds `Bluetooth.activeAdapters()` func [#45](https://github.com/chrvadala/node-ble/pull/45); 
-- **1.9** - Upgrades deps; Adds `writeValueWithoutResponse()` and `writeValueWithResponse` methods [#47](https://github.com/chrvadala/node-ble/pull/47); Improves typescript definition [#48](https://github.com/chrvadala/node-ble/pull/48) 
+- **1.8** - Upgrades deps and gh-actions os; Adds `Bluetooth.activeAdapters()` func [#45](https://github.com/chrvadala/node-ble/pull/45);
+- **1.9** - Upgrades deps; Adds `writeValueWithoutResponse()` and `writeValueWithResponse` methods [#47](https://github.com/chrvadala/node-ble/pull/47); Improves typescript definition [#48](https://github.com/chrvadala/node-ble/pull/48)
 
 # Contributors
 - [chrvadala](https://github.com/chrvadala) (author)
